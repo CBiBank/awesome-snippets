@@ -6,13 +6,30 @@ const filePath = path.resolve(__dirname, '../../snippets/node.code-snippets')
 
 const snippets = {}
 for (let i = 0; i < builtinModules.length; i++) {
-  const module = builtinModules[i]
-  snippets[`Node.${module}`] = getSuggestion({
-    prefix: `node-${module}`,
+  const originModuleName = builtinModules[i]
+  let transformModuleName = originModuleName
+  // 跳过 _ 开头的模块
+  if (originModuleName.indexOf('_') === 0) {
+    continue
+  }
+  // 中间带 _ 的模块
+  if (originModuleName.indexOf('_') > -1) {
+    transformModuleName = transformString(originModuleName, {
+      identify: '_'
+    })
+  }
+  // 中间带 / 的模块
+  if (originModuleName.indexOf('/') > -1) {
+    transformModuleName = transformString(originModuleName, {
+      identify: '/'
+    })
+  }
+  snippets[`Node.${originModuleName}`] = getSuggestion({
+    prefix: `node-${originModuleName}`,
     body: [
-      `const \${1:${module}} = require('node:${module}')`
+      `const \${1:${transformModuleName}} = require('node:${originModuleName}')`
     ],
-    description: `Code Snippets For Node.${module}`
+    description: `Code Snippets For Node.${originModuleName}`
   })
 }
 
@@ -23,6 +40,16 @@ try {
   console.log(e)
 }
 
+function transformString (str, { identify = '_' } = {}) {
+  const list = str.split(identify)
+  const upperCaseList = list.map((item, index) => {
+    if (index === 0) {
+      return item
+    }
+    return item.charAt(0).toUpperCase() + item.slice(1)
+  })
+  return upperCaseList.join('')
+}
 
 function getSuggestion ({
   prefix = 'node',
