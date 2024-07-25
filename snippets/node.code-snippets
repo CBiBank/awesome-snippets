@@ -1,0 +1,464 @@
+{
+  "Node._http_agent": {
+    "prefix": "node-_http_agent",
+    "body": [
+      "const ${1:_http_agent} = require('node:_http_agent')"
+    ],
+    "description": "Code Snippets For Node._http_agent"
+  },
+  "Node._http_client": {
+    "prefix": "node-_http_client",
+    "body": [
+      "const ${1:_http_client} = require('node:_http_client')"
+    ],
+    "description": "Code Snippets For Node._http_client"
+  },
+  "Node._http_common": {
+    "prefix": "node-_http_common",
+    "body": [
+      "const ${1:_http_common} = require('node:_http_common')"
+    ],
+    "description": "Code Snippets For Node._http_common"
+  },
+  "Node._http_incoming": {
+    "prefix": "node-_http_incoming",
+    "body": [
+      "const ${1:_http_incoming} = require('node:_http_incoming')"
+    ],
+    "description": "Code Snippets For Node._http_incoming"
+  },
+  "Node._http_outgoing": {
+    "prefix": "node-_http_outgoing",
+    "body": [
+      "const ${1:_http_outgoing} = require('node:_http_outgoing')"
+    ],
+    "description": "Code Snippets For Node._http_outgoing"
+  },
+  "Node._http_server": {
+    "prefix": "node-_http_server",
+    "body": [
+      "const ${1:_http_server} = require('node:_http_server')"
+    ],
+    "description": "Code Snippets For Node._http_server"
+  },
+  "Node._stream_duplex": {
+    "prefix": "node-_stream_duplex",
+    "body": [
+      "const ${1:_stream_duplex} = require('node:_stream_duplex')"
+    ],
+    "description": "Code Snippets For Node._stream_duplex"
+  },
+  "Node._stream_passthrough": {
+    "prefix": "node-_stream_passthrough",
+    "body": [
+      "const ${1:_stream_passthrough} = require('node:_stream_passthrough')"
+    ],
+    "description": "Code Snippets For Node._stream_passthrough"
+  },
+  "Node._stream_readable": {
+    "prefix": "node-_stream_readable",
+    "body": [
+      "const ${1:_stream_readable} = require('node:_stream_readable')"
+    ],
+    "description": "Code Snippets For Node._stream_readable"
+  },
+  "Node._stream_transform": {
+    "prefix": "node-_stream_transform",
+    "body": [
+      "const ${1:_stream_transform} = require('node:_stream_transform')"
+    ],
+    "description": "Code Snippets For Node._stream_transform"
+  },
+  "Node._stream_wrap": {
+    "prefix": "node-_stream_wrap",
+    "body": [
+      "const ${1:_stream_wrap} = require('node:_stream_wrap')"
+    ],
+    "description": "Code Snippets For Node._stream_wrap"
+  },
+  "Node._stream_writable": {
+    "prefix": "node-_stream_writable",
+    "body": [
+      "const ${1:_stream_writable} = require('node:_stream_writable')"
+    ],
+    "description": "Code Snippets For Node._stream_writable"
+  },
+  "Node._tls_common": {
+    "prefix": "node-_tls_common",
+    "body": [
+      "const ${1:_tls_common} = require('node:_tls_common')"
+    ],
+    "description": "Code Snippets For Node._tls_common"
+  },
+  "Node._tls_wrap": {
+    "prefix": "node-_tls_wrap",
+    "body": [
+      "const ${1:_tls_wrap} = require('node:_tls_wrap')"
+    ],
+    "description": "Code Snippets For Node._tls_wrap"
+  },
+  "Node.assert": {
+    "prefix": "node-assert",
+    "body": [
+      "const ${1:assert} = require('node:assert')"
+    ],
+    "description": "Code Snippets For Node.assert"
+  },
+  "Node.assert/strict": {
+    "prefix": "node-assert/strict",
+    "body": [
+      "const ${1:assert/strict} = require('node:assert/strict')"
+    ],
+    "description": "Code Snippets For Node.assert/strict"
+  },
+  "Node.async_hooks": {
+    "prefix": "node-async_hooks",
+    "body": [
+      "const ${1:async_hooks} = require('node:async_hooks')"
+    ],
+    "description": "Code Snippets For Node.async_hooks"
+  },
+  "Node.buffer": {
+    "prefix": "node-buffer",
+    "body": [
+      "const ${1:buffer} = require('node:buffer')"
+    ],
+    "description": "Code Snippets For Node.buffer"
+  },
+  "Node.child_process": {
+    "prefix": "node-child_process",
+    "body": [
+      "const ${1:child_process} = require('node:child_process')"
+    ],
+    "description": "Code Snippets For Node.child_process"
+  },
+  "Node.cluster": {
+    "prefix": "node-cluster",
+    "body": [
+      "const ${1:cluster} = require('node:cluster')"
+    ],
+    "description": "Code Snippets For Node.cluster"
+  },
+  "Node.console": {
+    "prefix": "node-console",
+    "body": [
+      "const ${1:console} = require('node:console')"
+    ],
+    "description": "Code Snippets For Node.console"
+  },
+  "Node.constants": {
+    "prefix": "node-constants",
+    "body": [
+      "const ${1:constants} = require('node:constants')"
+    ],
+    "description": "Code Snippets For Node.constants"
+  },
+  "Node.crypto": {
+    "prefix": "node-crypto",
+    "body": [
+      "const ${1:crypto} = require('node:crypto')"
+    ],
+    "description": "Code Snippets For Node.crypto"
+  },
+  "Node.dgram": {
+    "prefix": "node-dgram",
+    "body": [
+      "const ${1:dgram} = require('node:dgram')"
+    ],
+    "description": "Code Snippets For Node.dgram"
+  },
+  "Node.diagnostics_channel": {
+    "prefix": "node-diagnostics_channel",
+    "body": [
+      "const ${1:diagnostics_channel} = require('node:diagnostics_channel')"
+    ],
+    "description": "Code Snippets For Node.diagnostics_channel"
+  },
+  "Node.dns": {
+    "prefix": "node-dns",
+    "body": [
+      "const ${1:dns} = require('node:dns')"
+    ],
+    "description": "Code Snippets For Node.dns"
+  },
+  "Node.dns/promises": {
+    "prefix": "node-dns/promises",
+    "body": [
+      "const ${1:dns/promises} = require('node:dns/promises')"
+    ],
+    "description": "Code Snippets For Node.dns/promises"
+  },
+  "Node.domain": {
+    "prefix": "node-domain",
+    "body": [
+      "const ${1:domain} = require('node:domain')"
+    ],
+    "description": "Code Snippets For Node.domain"
+  },
+  "Node.events": {
+    "prefix": "node-events",
+    "body": [
+      "const ${1:events} = require('node:events')"
+    ],
+    "description": "Code Snippets For Node.events"
+  },
+  "Node.fs": {
+    "prefix": "node-fs",
+    "body": [
+      "const ${1:fs} = require('node:fs')"
+    ],
+    "description": "Code Snippets For Node.fs"
+  },
+  "Node.fs/promises": {
+    "prefix": "node-fs/promises",
+    "body": [
+      "const ${1:fs/promises} = require('node:fs/promises')"
+    ],
+    "description": "Code Snippets For Node.fs/promises"
+  },
+  "Node.http": {
+    "prefix": "node-http",
+    "body": [
+      "const ${1:http} = require('node:http')"
+    ],
+    "description": "Code Snippets For Node.http"
+  },
+  "Node.http2": {
+    "prefix": "node-http2",
+    "body": [
+      "const ${1:http2} = require('node:http2')"
+    ],
+    "description": "Code Snippets For Node.http2"
+  },
+  "Node.https": {
+    "prefix": "node-https",
+    "body": [
+      "const ${1:https} = require('node:https')"
+    ],
+    "description": "Code Snippets For Node.https"
+  },
+  "Node.inspector": {
+    "prefix": "node-inspector",
+    "body": [
+      "const ${1:inspector} = require('node:inspector')"
+    ],
+    "description": "Code Snippets For Node.inspector"
+  },
+  "Node.module": {
+    "prefix": "node-module",
+    "body": [
+      "const ${1:module} = require('node:module')"
+    ],
+    "description": "Code Snippets For Node.module"
+  },
+  "Node.net": {
+    "prefix": "node-net",
+    "body": [
+      "const ${1:net} = require('node:net')"
+    ],
+    "description": "Code Snippets For Node.net"
+  },
+  "Node.os": {
+    "prefix": "node-os",
+    "body": [
+      "const ${1:os} = require('node:os')"
+    ],
+    "description": "Code Snippets For Node.os"
+  },
+  "Node.path": {
+    "prefix": "node-path",
+    "body": [
+      "const ${1:path} = require('node:path')"
+    ],
+    "description": "Code Snippets For Node.path"
+  },
+  "Node.path/posix": {
+    "prefix": "node-path/posix",
+    "body": [
+      "const ${1:path/posix} = require('node:path/posix')"
+    ],
+    "description": "Code Snippets For Node.path/posix"
+  },
+  "Node.path/win32": {
+    "prefix": "node-path/win32",
+    "body": [
+      "const ${1:path/win32} = require('node:path/win32')"
+    ],
+    "description": "Code Snippets For Node.path/win32"
+  },
+  "Node.perf_hooks": {
+    "prefix": "node-perf_hooks",
+    "body": [
+      "const ${1:perf_hooks} = require('node:perf_hooks')"
+    ],
+    "description": "Code Snippets For Node.perf_hooks"
+  },
+  "Node.process": {
+    "prefix": "node-process",
+    "body": [
+      "const ${1:process} = require('node:process')"
+    ],
+    "description": "Code Snippets For Node.process"
+  },
+  "Node.punycode": {
+    "prefix": "node-punycode",
+    "body": [
+      "const ${1:punycode} = require('node:punycode')"
+    ],
+    "description": "Code Snippets For Node.punycode"
+  },
+  "Node.querystring": {
+    "prefix": "node-querystring",
+    "body": [
+      "const ${1:querystring} = require('node:querystring')"
+    ],
+    "description": "Code Snippets For Node.querystring"
+  },
+  "Node.readline": {
+    "prefix": "node-readline",
+    "body": [
+      "const ${1:readline} = require('node:readline')"
+    ],
+    "description": "Code Snippets For Node.readline"
+  },
+  "Node.readline/promises": {
+    "prefix": "node-readline/promises",
+    "body": [
+      "const ${1:readline/promises} = require('node:readline/promises')"
+    ],
+    "description": "Code Snippets For Node.readline/promises"
+  },
+  "Node.repl": {
+    "prefix": "node-repl",
+    "body": [
+      "const ${1:repl} = require('node:repl')"
+    ],
+    "description": "Code Snippets For Node.repl"
+  },
+  "Node.stream": {
+    "prefix": "node-stream",
+    "body": [
+      "const ${1:stream} = require('node:stream')"
+    ],
+    "description": "Code Snippets For Node.stream"
+  },
+  "Node.stream/consumers": {
+    "prefix": "node-stream/consumers",
+    "body": [
+      "const ${1:stream/consumers} = require('node:stream/consumers')"
+    ],
+    "description": "Code Snippets For Node.stream/consumers"
+  },
+  "Node.stream/promises": {
+    "prefix": "node-stream/promises",
+    "body": [
+      "const ${1:stream/promises} = require('node:stream/promises')"
+    ],
+    "description": "Code Snippets For Node.stream/promises"
+  },
+  "Node.stream/web": {
+    "prefix": "node-stream/web",
+    "body": [
+      "const ${1:stream/web} = require('node:stream/web')"
+    ],
+    "description": "Code Snippets For Node.stream/web"
+  },
+  "Node.string_decoder": {
+    "prefix": "node-string_decoder",
+    "body": [
+      "const ${1:string_decoder} = require('node:string_decoder')"
+    ],
+    "description": "Code Snippets For Node.string_decoder"
+  },
+  "Node.sys": {
+    "prefix": "node-sys",
+    "body": [
+      "const ${1:sys} = require('node:sys')"
+    ],
+    "description": "Code Snippets For Node.sys"
+  },
+  "Node.timers": {
+    "prefix": "node-timers",
+    "body": [
+      "const ${1:timers} = require('node:timers')"
+    ],
+    "description": "Code Snippets For Node.timers"
+  },
+  "Node.timers/promises": {
+    "prefix": "node-timers/promises",
+    "body": [
+      "const ${1:timers/promises} = require('node:timers/promises')"
+    ],
+    "description": "Code Snippets For Node.timers/promises"
+  },
+  "Node.tls": {
+    "prefix": "node-tls",
+    "body": [
+      "const ${1:tls} = require('node:tls')"
+    ],
+    "description": "Code Snippets For Node.tls"
+  },
+  "Node.trace_events": {
+    "prefix": "node-trace_events",
+    "body": [
+      "const ${1:trace_events} = require('node:trace_events')"
+    ],
+    "description": "Code Snippets For Node.trace_events"
+  },
+  "Node.tty": {
+    "prefix": "node-tty",
+    "body": [
+      "const ${1:tty} = require('node:tty')"
+    ],
+    "description": "Code Snippets For Node.tty"
+  },
+  "Node.url": {
+    "prefix": "node-url",
+    "body": [
+      "const ${1:url} = require('node:url')"
+    ],
+    "description": "Code Snippets For Node.url"
+  },
+  "Node.util": {
+    "prefix": "node-util",
+    "body": [
+      "const ${1:util} = require('node:util')"
+    ],
+    "description": "Code Snippets For Node.util"
+  },
+  "Node.util/types": {
+    "prefix": "node-util/types",
+    "body": [
+      "const ${1:util/types} = require('node:util/types')"
+    ],
+    "description": "Code Snippets For Node.util/types"
+  },
+  "Node.v8": {
+    "prefix": "node-v8",
+    "body": [
+      "const ${1:v8} = require('node:v8')"
+    ],
+    "description": "Code Snippets For Node.v8"
+  },
+  "Node.vm": {
+    "prefix": "node-vm",
+    "body": [
+      "const ${1:vm} = require('node:vm')"
+    ],
+    "description": "Code Snippets For Node.vm"
+  },
+  "Node.worker_threads": {
+    "prefix": "node-worker_threads",
+    "body": [
+      "const ${1:worker_threads} = require('node:worker_threads')"
+    ],
+    "description": "Code Snippets For Node.worker_threads"
+  },
+  "Node.zlib": {
+    "prefix": "node-zlib",
+    "body": [
+      "const ${1:zlib} = require('node:zlib')"
+    ],
+    "description": "Code Snippets For Node.zlib"
+  }
+}
