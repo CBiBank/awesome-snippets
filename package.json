@@ -2,8 +2,12 @@
   "name": "awesome-snippets",
   "displayName": "awesome-snippets",
   "description": "Code Snippets For Modern Project(Node, Vue, ES...)",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
   "publisher": "oneyoung19",
+  "scripts": {
+    "standard": "standard-version"
+  },
   "engines": {
     "vscode": "^1.91.0"
   },
@@ -22,10 +26,12 @@
       }
     ]
   },
-  
   "repository": {
     "type": "git",
     "url": "https://github.com/CBiBank/code-snippets.git"
   },
-  "homepage": "https://github.com/CBiBank/code-snippets/blob/main/README.md"
+  "homepage": "https://github.com/CBiBank/code-snippets/blob/main/README.md",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
 }
