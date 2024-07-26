@@ -1,4 +1,8 @@
+# Use vsce ls to list published files
 .vscode/**
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+
+# Files to ignore
+src/**

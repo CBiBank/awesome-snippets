@@ -1,4 +1,4 @@
-# code-snippets
+# awesome-snippets
 
 This repository contains code snippets for various programming languages.
 
