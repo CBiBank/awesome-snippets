@@ -11,13 +11,3 @@ All notable changes to this project will be documented in this file. See [standa
 * 更新package name ([f378e53](https://github.com/CBiBank/code-snippets/commit/f378e53c9d3c1ee796ec3cd24c6c4dcb83bb4d69))
 * 更新package.json ([cf56fab](https://github.com/CBiBank/code-snippets/commit/cf56fab27aca4ca494e9a2eebfdcd8567b9410d2))
 * 批量化自动生成node snippets ([858eaba](https://github.com/CBiBank/code-snippets/commit/858eabab7c8eba058af6b2d12e8029111fd1f970))
-
-# Change Log
-
-All notable changes to the "code-snippets" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
