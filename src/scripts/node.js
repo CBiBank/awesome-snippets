@@ -31,6 +31,13 @@ for (let i = 0; i < builtinModules.length; i++) {
     ],
     description: `Code Snippets For Node.${originModuleName}`
   })
+  snippets[`Node.ESM.${originModuleName}`] = getSuggestion({
+    prefix: `node-esm-${originModuleName}`,
+    body: [
+      `import \${1:${transformModuleName}} from 'node:${originModuleName}'`
+    ],
+    description: `ESM Code Snippets For Node.${originModuleName}`
+  })
 }
 
 try {
