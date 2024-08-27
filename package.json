@@ -23,6 +23,10 @@
       {
         "language": "typescript",
         "path": "./snippets/node.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/version.code-snippets"
       }
     ]
   },
