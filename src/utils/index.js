@@ -62,6 +62,10 @@ To:
 exports.transformJsToArray = function (filePath) {
   const fileContent = fs.readFileSync(filePath, 'utf-8')
   const lines = fileContent.split(/\r?\n/)
-  const formattedLines = lines.map(line => line.replace(/^\s+/, match => match.replace(/^\s+/g, '\t')).replace(/\s+$/, ''))
+  const formattedLines = lines.map(
+    line => line.replace(/^\s+/, match => match.replace(/  /g, '\t')) // 两个空格视作一个tab
+      .replace(/\s+$/, '')
+      .replace(/\$\{/g,'\\${') // 将ES6模板字符串添加\\转义
+  )
   return formattedLines
 }
