@@ -1,6 +1,6 @@
 {
-  "Versions.vue2": {
-    "prefix": "version-vue2",
+  "Vue2.versions": {
+    "prefix": "vue2-versions",
     "body": [
       "{",
         "\t'vue': '^2.7.16',",
@@ -10,6 +10,6 @@
         "\t'vuex-router-sync': '^5.0.0'",
       "}"
     ],
-    "description": "The latest version of Vue2"
+    "description": "The latest versions of Vue2"
   },
 }

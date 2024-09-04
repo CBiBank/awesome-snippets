@@ -26,7 +26,7 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/version.code-snippets"
+        "path": "./snippets/vue2.code-snippets"
       }
     ]
   },
