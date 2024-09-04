@@ -6,7 +6,9 @@
   "license": "MIT",
   "publisher": "oneyoung19",
   "scripts": {
-    "standard": "standard-version"
+    "build": "node src/app.js",
+    "standard": "standard-version",
+    "release": "standard-version & vsce publish"
   },
   "engines": {
     "vscode": "^1.91.0"
@@ -23,6 +25,14 @@
       {
         "language": "typescript",
         "path": "./snippets/node.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/node-express.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/node-express.code-snippets"
       },
       {
         "language": "javascript",

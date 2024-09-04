@@ -1,8 +1,6 @@
-const path = require('node:path')
-const fs = require('node:fs')
+const { transformString, getSuggestion } = require('../../utils')
 const { builtinModules } = require('module')
 console.log(builtinModules)
-const filePath = path.resolve(__dirname, '../../snippets/node.code-snippets')
 
 const snippets = {}
 for (let i = 0; i < builtinModules.length; i++) {
@@ -40,32 +38,4 @@ for (let i = 0; i < builtinModules.length; i++) {
   })
 }
 
-try {
-  fs.writeFileSync(filePath, JSON.stringify(snippets, null, 2))
-  console.log(`Write File Successfully`)
-} catch (e) {
-  console.log(e)
-}
-
-function transformString (str, { identify = '_' } = {}) {
-  const list = str.split(identify)
-  const upperCaseList = list.map((item, index) => {
-    if (index === 0) {
-      return item
-    }
-    return item.charAt(0).toUpperCase() + item.slice(1)
-  })
-  return upperCaseList.join('')
-}
-
-function getSuggestion ({
-  prefix = 'node',
-  body = [],
-  description = 'Code Snippets For Node.'
-} = {}) {
-  return {
-    prefix,
-    body,
-    description
-  }
-}
+module.exports = snippets
