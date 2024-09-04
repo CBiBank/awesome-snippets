@@ -1,5 +1,8 @@
 const fs = require('fs')
 
+/*
+node_modules => nodeModules
+*/
 exports.transformString = function (str, { identify = '_' } = {}) {
   const list = str.split(identify)
   const upperCaseList = list.map((item, index) => {
@@ -9,6 +12,15 @@ exports.transformString = function (str, { identify = '_' } = {}) {
     return item.charAt(0).toUpperCase() + item.slice(1)
   })
   return upperCaseList.join('')
+}
+
+exports.transformSymbol = function (str, { from = '-', to = '.' } = {}) {
+  return str.split(from).join(to)
+}
+
+// 首字母大写
+exports.upperCaseFirst = function (str = '') {
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
 exports.getSuggestion = function ({

@@ -47,5 +47,8 @@
   "homepage": "https://github.com/CBiBank/code-snippets/blob/main/README.md",
   "devDependencies": {
     "standard-version": "^9.5.0"
+  },
+  "dependencies": {
+    "glob": "^11.0.0"
   }
 }

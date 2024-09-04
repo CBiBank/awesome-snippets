@@ -1,6 +1,6 @@
 const { transformString, getSuggestion } = require('../../utils')
 const { builtinModules } = require('module')
-console.log(builtinModules)
+// console.log(builtinModules)
 
 const snippets = {}
 for (let i = 0; i < builtinModules.length; i++) {

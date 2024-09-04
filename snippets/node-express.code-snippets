@@ -1,5 +1,273 @@
 {
-  "node.express": {
+  "Node.express.middleware": {
+    "prefix": "node-express-middleware",
+    "body": [
+      "app.use('/', (req, res, next) => {",
+      "\tconsole.log(`Middleware before`)",
+      "\tnext()",
+      "\tconsole.log(`Middleware after`)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.middleware."
+  },
+  "Node.express.session": {
+    "prefix": "node-express-session",
+    "body": [
+      "const session = require('express-session')",
+      "app.use(session({",
+      "\tname: 'express-session-cookie', // 设置 cookie 名称",
+      "\tsecret: 'your-secret-key',  // 用于加密 session ID 的密钥",
+      "\tresave: false,  // 是否强制保存 session 即使未修改",
+      "\tsaveUninitialized: true  // 是否保存未初始化的 session",
+      "}))",
+      "",
+      "// 设置 Session",
+      "app.get('/set-session', (req, res) => {",
+      "\treq.session.username = 'JohnDoe'",
+      "\tres.send('Session has been set')",
+      "})",
+      "",
+      "// 获取 Session",
+      "app.get('/get-session', (req, res) => {",
+      "\tconst username = req.session.username",
+      "\tres.send(`Username from session: ${username}`)",
+      "})",
+      "",
+      "// 销毁 Session",
+      "app.get('/destroy-session', (req, res) => {",
+      "\treq.session.destroy(err => {",
+      "\tif (err) {",
+      "\treturn res.send('Error destroying session')",
+      "\t}",
+      "\tres.send('Session has been destroyed')",
+      "\t})",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.session."
+  },
+  "Node.express.cookie": {
+    "prefix": "node-express-cookie",
+    "body": [
+      "const cookieParser = require('cookie-parser')",
+      "app.use(cookieParser())",
+      "",
+      "// 设置 Cookie",
+      "app.get('/set-cookie', (req, res) => {",
+      "\tres.cookie('username', 'JohnDoe', { maxAge: 900000, httpOnly: true })",
+      "\tres.send('Cookie has been set')",
+      "})",
+      "",
+      "// 获取 Cookie",
+      "app.get('/get-cookie', (req, res) => {",
+      "\tconst username = req.cookies.username",
+      "\tres.send(`Username from cookie: ${username}`)",
+      "})",
+      "",
+      "// 清除 Cookie",
+      "app.get('/clear-cookie', (req, res) => {",
+      "\tres.clearCookie('username')",
+      "\tres.send('Cookie has been cleared')",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.cookie."
+  },
+  "Node.express.body.formData": {
+    "prefix": "node-express-body-formData",
+    "body": [
+      "const multer = require('multer')",
+      "const upload = multer()",
+      "app.post('/form-data', upload.none(), (req, res) => {",
+      "\tres.send(res.body)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.body.formData."
+  },
+  "Node.express.body": {
+    "prefix": "node-express-body",
+    "body": [
+      "// application/x-www-form-urlencoded",
+      "app.use(express.urlencoded({ extended: true }))",
+      "// application/json",
+      "app.use(express.json())",
+      "// text-plain",
+      "app.use(express.text())",
+      "// application/octet-stream",
+      "app.use(express.raw())",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.body."
+  },
+  "Node.express.view": {
+    "prefix": "node-express-view",
+    "body": [
+      "app.set('view engine', 'ejs')",
+      "app.set('views', path.join(__dirname, 'views'))",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.view."
+  },
+  "Node.express.static": {
+    "prefix": "node-express-static",
+    "body": [
+      "app.use('/static', express.static('public'))",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.static."
+  },
+  "Node.express.router": {
+    "prefix": "node-express-router",
+    "body": [
+      "const router = express.Router()",
+      "",
+      "router.get('/list', (req, res) => {",
+      "\tres.send('User List')",
+      "})",
+      "",
+      "app.use('/user', router)",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.router."
+  },
+  "Node.express.cors": {
+    "prefix": "node-express-cors",
+    "body": [
+      "const cors = require('cors')",
+      "app.use(cors({",
+      "\torigin: '*',",
+      "\tmethods: ['GET', 'POST'],",
+      "\tallowedHeaders: ['Content-Type', 'Authorization'],",
+      "\tcredentials: true,",
+      "\tpreflightContinue: false,",
+      "\toptionsSuccessStatus: 204",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.cors."
+  },
+  "Node.express.download": {
+    "prefix": "node-express-download",
+    "body": [
+      "router.post('/download', (req, res) => {",
+      "\tconst { filename } = req.body",
+      "\tconst filePath = path.join(__dirname, '../uploads', filename)",
+      "\t// download方法会在响应头中添加Content-Disposition头",
+      "\tres.download(filePath, filename, (err) => {",
+      "\tif (err) {",
+      "\tconsole.error('File failed to download:', err)",
+      "\tres.status(500).send('Error downloading file')",
+      "\t}",
+      "\t})",
+      "\t// res.sendFile(filePath, (err) => {",
+      "\t//   if (err) {",
+      "\t//     console.error('File failed to send:', err)",
+      "\t//     res.status(500).send('Error sending file')",
+      "\t//   }",
+      "\t// })",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.download."
+  },
+  "Node.express.upload": {
+    "prefix": "node-express-upload",
+    "body": [
+      "const express = require('express')",
+      "const router = express.Router()",
+      "const fs = require('node:fs')",
+      "const path = require('node:path')",
+      "",
+      "const multer = require('multer')",
+      "const uploadDirname = 'uploads'",
+      "const uploadDir = path.resolve(__dirname, uploadDirname)",
+      "if (!fs.existsSync(uploadDir)) {",
+      "\tfs.mkdirSync(uploadDir, { recursive: true })",
+      "}",
+      "const storage = multer.diskStorage({",
+      "\tdestination: function (req, file, cb) {",
+      "\tcb(null, uploadDir)",
+      "\t},",
+      "\tfilename: function (req, file, cb) {",
+      "\tcb(null, `${Date.now()}-${file.originalname}`)",
+      "\t}",
+      "})",
+      "const upload = multer({ storage: storage })",
+      "",
+      "router.post('/upload', upload.single('file'), (req, res, next) => {",
+      "\ttry {",
+      "\tconsole.log(req.file)",
+      "\tres.send('File uploaded successfully!')",
+      "\t} catch (error) {",
+      "\tnext(error)",
+      "\t}",
+      "})",
+      "",
+      "module.exports = router",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.upload."
+  },
+  "Node.express.error": {
+    "prefix": "node-express-error",
+    "body": [
+      "app.use('/', (req, res, next) => {",
+      "\tconst error = new Error('Not Found')",
+      "\terror.status = 404",
+      "\tnext(error)",
+      "})",
+      "app.use((err, req, res, next) => {",
+      "\tconst { name, status, log = false } = err",
+      "\tif (log) {",
+      "\tconst errorDetails = `",
+      "\tError Message: ${err.message}",
+      "\tStatus Code: ${err.status || 500}",
+      "\tStack Trace: ${err.stack}",
+      "\tRequest Method: ${req.method}",
+      "\tRequest URL: ${req.originalUrl}",
+      "\tRequest Headers: ${JSON.stringify(req.headers)}",
+      "\t`",
+      "\terrorLogStream && errorLogStream.write(errorDetails.replace(/ /g, '') + '\\n', 'utf-8')",
+      "\t}",
+      "\tif (name === 'ValidationError') {",
+      "\treturn res.status(400).send({ error: name })",
+      "\t}",
+      "\tif (status === 404) {",
+      "\treturn res.status(404).send('Not Found')",
+      "\t}",
+      "\tres.status(500).send('Internal Server Error')",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.error."
+  },
+  "Node.express.logger": {
+    "prefix": "node-express-logger",
+    "body": [
+      "// 创建日志文件写入流",
+      "const fs = require('node:fs')",
+      "const path = require('node:path')",
+      "const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), { flags: 'a' })",
+      "const errorLogStream = fs.createWriteStream(path.join(__dirname, 'logs/error.log'), { flags: 'a' })",
+      "",
+      "// combined > common > short > dev >= short",
+      "app.use(morgan('combined', {",
+      "\tstream: accessLogStream, // 指定日志的输出流。默认是 process.stdout（控制台输出）",
+      "\tskip: (req, res) => res.statusCode >= 400, // 跳过特定条件下的日志记录",
+      "\timmediate: false // 立即记录日志，通常日志是在响应发送后记录",
+      "}))",
+      "app.use(morgan('combined', {",
+      "\tstream: errorLogStream,",
+      "\tskip: (req, res) => res.statusCode < 400,",
+      "\timmediate: false",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.express.logger."
+  },
+  "Node.express": {
     "prefix": "node-express",
     "body": [
       "const express = require('express')",
@@ -19,6 +287,6 @@
       "})",
       ""
     ],
-    "description": "Code Snippets For Node Express."
+    "description": "Code Snippets For Node.express."
   }
 }

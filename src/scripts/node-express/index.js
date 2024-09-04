@@ -1,14 +1,24 @@
 const fs = require('node:fs')
 const path = require('node:path')
-const { getSuggestion, transformJsToArray } = require('../../utils')
-const filePath = path.resolve(__dirname, './1.node-express.js')
-const snippetsPath = path.resolve(__dirname, '../../../snippets/node-express.code-snippets')
+const { globSync } = require('glob')
+const { getSuggestion, transformJsToArray, transformSymbol, upperCaseFirst } = require('../../utils')
 
-const snippets = getSuggestion({
-  prop: 'node.express',
-  prefix: 'node-express',
-  body: transformJsToArray(filePath),
-  description: 'Code Snippets For Node Express.'
+const files = globSync('src/scripts/node-express/**/*', { nodir: true })
+const filenames = files.map(file => path.basename(file)).filter(file => file !== 'index.js')
+const filenameRegExp = /^\d+\.(.+)\.js$/
+
+const snippets = {}
+filenames.forEach(filename => {
+  const matches = filename.match(filenameRegExp)
+  const prefix = matches[1]
+  const prop = upperCaseFirst(transformSymbol(prefix))
+  const suggestion = getSuggestion({
+    prefix,
+    body: transformJsToArray(path.resolve(__dirname, `./${filename}`)),
+    description: `Code Snippets For ${prop}.`
+  })
+  snippets[prop] = suggestion
+  return suggestion
 })
 
-fs.writeFileSync(snippetsPath, JSON.stringify(snippets, null, 2))
+module.exports = snippets
