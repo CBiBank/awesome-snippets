@@ -1,19 +1,32 @@
 const path = require('node:path')
 const fs = require('node:fs')
+const fsPromise = fs.promises
+const { globSnippets } = require('./utils/glob')
 
-const nodeFilePath = path.resolve(__dirname, '../snippets/node.code-snippets')
-const nodeSnippets = require('./scripts/node')
+const scriptsPath = path.resolve(__dirname, './scripts')
+const dirs = fs.readdirSync(scriptsPath)
 
-const nodeExpressFilePath = path.resolve(__dirname, '../snippets/node-express.code-snippets')
-const nodeExpressSnippets = require('./scripts/node-express')
+console.log(dirs)
 
-const nodeToolFilePath = path.resolve(__dirname, '../snippets/node-tool.code-snippets')
-const nodeToolSnippets = require('./scripts/node-tool')
+const generateList = dirs.map(dir => {
+  const dirname = path.resolve(scriptsPath, dir)
+  const from = `src/scripts/${dir}`
+  const to = path.resolve(__dirname, `../snippets/${dir}.code-snippets`)
+  if (dir === 'node') {
+    const snippets = require(`${dirname}/index.js`)
+    return fsPromise.writeFile(to, JSON.stringify(snippets, null, 2))
+  }
+  const snippets = globSnippets({
+    dirname
+  }, {
+    pattern: `${from}/**/*`,
+    nodir: true
+  })
+  return fsPromise.writeFile(to, JSON.stringify(snippets, null, 2))
+})
 
-try {
-  fs.writeFileSync(nodeFilePath, JSON.stringify(nodeSnippets, null, 2))
-  fs.writeFileSync(nodeToolFilePath, JSON.stringify(nodeToolSnippets, null, 2))
+Promise.all(generateList).then(_ => {
   console.log(`Write File Successfully`)
-} catch (e) {
+}).catch(e => {
   console.log(e)
-}
+}) 
