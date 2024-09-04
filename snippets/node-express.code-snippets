@@ -1,0 +1,24 @@
+{
+  "node.express": {
+    "prefix": "node-express",
+    "body": [
+      "const express = require('express')",
+      "const app = express()",
+      "const port = 3000",
+      "",
+      "app.get('/', (req, res) => {",
+      "\tres.send('Got a GET request')",
+      "})",
+      "",
+      "app.post('/', (req, res) => {",
+      "\tres.send('Got a POST request')",
+      "})",
+      "",
+      "app.listen(port, () => {",
+      "\tconsole.log(`Example app listening on http://127.0.0.1:${port}`)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node Express."
+  }
+}
