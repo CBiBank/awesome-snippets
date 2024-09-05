@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/CBiBank/code-snippets/compare/v0.0.4...v0.0.5) (2024-09-05)
+
+
+### ✨ Features | 新功能
+
+* add node tool chalk ([890d3b0](https://github.com/CBiBank/code-snippets/commit/890d3b0421e370eea225be1ad1b187a9744c0fb2))
+* generate snippets from the app.js automatically ([558a75a](https://github.com/CBiBank/code-snippets/commit/558a75a36145e315a9e54ebd5c7ad881eb0cad01))
+* glob snippets & generate node-tool file ([514f6d5](https://github.com/CBiBank/code-snippets/commit/514f6d5d859a37f610eaeb1399a31972f47acaac))
+* node tool ([c21412f](https://github.com/CBiBank/code-snippets/commit/c21412f4aca236120cfb722f648e058b1b6835d8))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 依赖工具更改为yarn ([0f887cf](https://github.com/CBiBank/code-snippets/commit/0f887cfeb180500fceceaa365e325b7af5e0b98e))
+* node-express-view => node-express-views ([6f46f8d](https://github.com/CBiBank/code-snippets/commit/6f46f8d7d3a59700c927fe385f59a676f48ed4ff))
+
 ### [0.0.4](https://github.com/CBiBank/code-snippets/compare/v0.0.3...v0.0.4) (2024-09-04)
 
 
