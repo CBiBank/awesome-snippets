@@ -21,7 +21,7 @@ For example, here is a list of some Node.js snippets:
 1. `node-express`
 2. `node-express-router`
 3. `node-express-static`
-4. `node-express-view`
+4. `node-express-views`
 5. `node-express-body`
 6. `node-express-body-formData`
 7. `node-express-cookie`
