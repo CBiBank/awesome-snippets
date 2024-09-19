@@ -16,7 +16,24 @@ For example, here is a list of some Node.js snippets:
 | `node-child_process` | Node.child_process | `const childProcess = require('node:child_process')` |
 | `node-path/win32` | Node.path/win32 | `const pathWin32 = require('node:path/win32')` |
 
-### 2.Node Express
+### 2.Node Vanilla
+
+1. `node-vanilla`
+2. `node-vanilla-router`
+3. `node-vanilla-static`
+4. `node-vanilla-views`
+5. `node-vanilla-body`
+6. `node-vanilla-body-formData`
+7. `node-vanilla-cookie`
+8. `node-vanilla-session`
+9. `node-vanilla-middleware`
+10. `node-vanilla-logger`
+11. `node-vanilla-error`
+12. `node-vanilla-upload`
+13. `node-vanilla-download`
+14. `node-vanilla-cors`
+
+### 3.Node Express
 
 1. `node-express`
 2. `node-express-router`
@@ -33,7 +50,7 @@ For example, here is a list of some Node.js snippets:
 13. `node-express-download`
 14. `node-express-cors`
 
-### 3.Node Koa
+### 4.Node Koa
 
 1. `node-koa`
 2. `node-koa-router`
@@ -50,7 +67,7 @@ For example, here is a list of some Node.js snippets:
 13. `node-koa-download`
 14. `node-koa-cors`
 
-### 4.Node Tool
+### 5.Node Tool
 
 1. `node-tool-debug`
 2. `node-tool-nodemon`
