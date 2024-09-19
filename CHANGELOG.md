@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/CBiBank/code-snippets/compare/v0.0.5...v0.0.6) (2024-09-19)
+
+
+### ✨ Features | 新功能
+
+* 添加node vanilla脚本 ([7cab3e3](https://github.com/CBiBank/code-snippets/commit/7cab3e3cf7810be9c44813a4d548cc25e545e413))
+* node koa snippets ([5776e91](https://github.com/CBiBank/code-snippets/commit/5776e919ec0d8e7392fbc34cde62aa5c6a5accb6))
+
+
+### ✏️ Documentation | 文档
+
+* 更新README ([7f523dc](https://github.com/CBiBank/code-snippets/commit/7f523dcfb6a473cde31a2f2a35a10df05be99e30))
+* 更新README ([ad4dc2a](https://github.com/CBiBank/code-snippets/commit/ad4dc2a5bfa781b7a0ebce10fb7195729a4caa4a))
+
 ### [0.0.5](https://github.com/CBiBank/code-snippets/compare/v0.0.4...v0.0.5) (2024-09-05)
 
 
