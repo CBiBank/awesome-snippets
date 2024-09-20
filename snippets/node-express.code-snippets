@@ -101,14 +101,14 @@
     ],
     "description": "Code Snippets For Node.express.body."
   },
-  "Node.express.view": {
-    "prefix": "node-express-view",
+  "Node.express.views": {
+    "prefix": "node-express-views",
     "body": [
       "app.set('view engine', 'ejs')",
       "app.set('views', path.join(__dirname, 'views'))",
       ""
     ],
-    "description": "Code Snippets For Node.express.view."
+    "description": "Code Snippets For Node.express.views."
   },
   "Node.express.static": {
     "prefix": "node-express-static",
@@ -246,7 +246,7 @@
   "Node.express.logger": {
     "prefix": "node-express-logger",
     "body": [
-      "// 创建日志文件写入流",
+      "const morgan = require('morgan')",
       "const fs = require('node:fs')",
       "const path = require('node:path')",
       "const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), { flags: 'a' })",

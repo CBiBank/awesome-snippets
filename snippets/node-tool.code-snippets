@@ -1,4 +1,19 @@
 {
+  "Node.tool.chalk": {
+    "prefix": "node-tool-chalk",
+    "body": [
+      "// chalk@^4.1.0",
+      "const chalk = require('chalk')",
+      "",
+      "chalk.red().green().blue().yellow()",
+      "",
+      "chalk.bgRed().bgGreen().bgBlue().bgYellow()",
+      "",
+      "chalk.bold().italic().underline().strikethrough()",
+      ""
+    ],
+    "description": "Code Snippets For Node.tool.chalk."
+  },
   "Node.tool.pm2": {
     "prefix": "node-tool-pm2",
     "body": [

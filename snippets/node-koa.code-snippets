@@ -1,0 +1,275 @@
+{
+  "Node.koa.middleware": {
+    "prefix": "node-koa-middleware",
+    "body": [
+      "app.use(async (ctx, next) => {",
+      "\tconsole.log(`Middleware before`)",
+      "\tawait next()",
+      "\tconsole.log(`Middleware after`)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.middleware."
+  },
+  "Node.koa.session": {
+    "prefix": "node-koa-session",
+    "body": [
+      "const session = require('koa-session')",
+      "",
+      "app.keys = ['some secret hurr']",
+      "const CONFIG = {",
+      "\tkey: 'koa.sess', /** (string) cookie key (default is koa.sess) */",
+      "\t/** (number || 'session') maxAge in ms (default is 1 days) */",
+      "\t/** 'session' will result in a cookie that expires when session/browser is closed */",
+      "\t/** Warning: If a session cookie is stolen, this cookie will never expire */",
+      "\tmaxAge: 86400000,",
+      "\tautoCommit: true, /** (boolean) automatically commit headers (default true) */",
+      "\toverwrite: true, /** (boolean) can overwrite or not (default true) */",
+      "\thttpOnly: true, /** (boolean) httpOnly or not (default true) */",
+      "\tsigned: true, /** (boolean) signed or not (default true) */",
+      "\trolling: false, /** (boolean) Force a session identifier cookie to be set on every response. The expiration is reset to the original maxAge, resetting the expiration countdown. (default is false) */",
+      "\trenew: false, /** (boolean) renew session when session is nearly expired, so we can always keep user logged in. (default is false)*/",
+      "\tsecure: false, /** (boolean) secure cookie*/",
+      "\tsameSite: null, /** (string) session cookie sameSite options (default null, don't set it) */",
+      "}",
+      "",
+      "app.use(session(CONFIG, app))",
+      "app.use(ctx => {",
+      "\t// ignore favicon",
+      "\tif (ctx.path === '/favicon.ico') return",
+      "",
+      "\tlet n = ctx.session.views || 0",
+      "\tctx.session.views = ++n",
+      "\tctx.body = n + ' views'",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.session."
+  },
+  "Node.koa.cookie": {
+    "prefix": "node-koa-cookie",
+    "body": [
+      "app.keys = ['some secret hurr']",
+      "",
+      "// 中间件",
+      "app.use(async (ctx, next) => {",
+      "\tctx.cookies.set('name', 'koa_signed', { signed: true })",
+      "\tawait next()",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.cookie."
+  },
+  "Node.koa.body.formData": {
+    "prefix": "node-koa-body-formData",
+    "body": [
+      "const multer = require('@koa/multer')",
+      "const upload = multer()",
+      "",
+      "app.post('/form-data', upload.none(), async (ctx, next) => {",
+      "\tctx.body = ctx.request.body",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.body.formData."
+  },
+  "Node.koa.body": {
+    "prefix": "node-koa-body",
+    "body": [
+      "const bodyParser = require('koa-bodyparser')",
+      "",
+      "app.use(bodyParser({",
+      "\t// ctx.request.body",
+      "\tenableTypes: ['json', 'form', 'text']",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.body."
+  },
+  "Node.koa.views": {
+    "prefix": "node-koa-views",
+    "body": [
+      "const views = require('koa-views')",
+      "",
+      "app.use(views(__dirname + '/views', {",
+      "\textension: 'ejs'",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.views."
+  },
+  "Node.koa.static": {
+    "prefix": "node-koa-static",
+    "body": [
+      "const static = require('koa-static')",
+      "",
+      "// 相比express的静态托管 不支持自定义路径前缀",
+      "app.use(static(__dirname + '/public'))",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.static."
+  },
+  "Node.koa.router": {
+    "prefix": "node-koa-router",
+    "body": [
+      "const Router = require('koa-router')",
+      "const router = new Router()",
+      "",
+      "router.get('/list', async (ctx) => {",
+      "\t// ctx.body = 'Home List'",
+      "\tawait ctx.render('home', { msg: 'Home List' })",
+      "})",
+      "",
+      "// 自定义前缀",
+      "router.use('/home', router.routes())",
+      "",
+      "// 必须调用注册router",
+      "app.use(router.routes())",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.router."
+  },
+  "Node.koa.cors": {
+    "prefix": "node-koa-cors",
+    "body": [
+      "const cors = require('@koa/cors')",
+      "",
+      "app.use(cors({",
+      "\torigin: '*',",
+      "\tallowMethods: ['GET', 'POST', 'PUT', 'DELETE'],",
+      "\tallowHeaders: ['Content-Type', 'Authorization'],",
+      "\tcredentials: true,",
+      "\tmaxAge: 86400",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.cors."
+  },
+  "Node.koa.download": {
+    "prefix": "node-koa-download",
+    "body": [
+      "router.post('/download', async (ctx) => {",
+      "\tconst { filename } = ctx.request.body",
+      "\tconst filePath = path.join(__dirname, 'uploads', filename)",
+      "",
+      "\tctx.set('Content-Disposition', `attachment; filename=\\${filename}`)",
+      "\tctx.set('Content-Type', 'application/octet-stream')",
+      "\tctx.body = fs.createReadStream(filePath)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.download."
+  },
+  "Node.koa.upload": {
+    "prefix": "node-koa-upload",
+    "body": [
+      "const Router = require('koa-router')",
+      "const router = new Router()",
+      "const fs = require('node:fs')",
+      "const path = require('node:path')",
+      "",
+      "const multer = require('@koa/multer')",
+      "const uploadDirname = 'uploads'",
+      "const uploadDir = path.resolve(__dirname, uploadDirname)",
+      "if (!fs.existsSync(uploadDir)) {",
+      "\tfs.mkdirSync(uploadDir, { recursive: true })",
+      "}",
+      "const storage = multer.diskStorage({",
+      "\tdestination: function (req, file, cb) {",
+      "\t\tcb(null, uploadDir)",
+      "\t},",
+      "\tfilename: function (req, file, cb) {",
+      "\t\tcb(null, `\\${Date.now()}-\\${file.originalname}`)",
+      "\t}",
+      "})",
+      "const upload = multer({ storage: storage })",
+      "",
+      "router.post('/upload', upload.single('file'), async (ctx, next) => {",
+      "\tconsole.log('file', ctx.request.file, ctx.file)",
+      "\ttry {",
+      "\t\tctx.body = 'File uploaded successfully!'",
+      "\t} catch (error) {",
+      "\t\tconsole.log(error)",
+      "\t\tnext(error)",
+      "\t}",
+      "})",
+      "",
+      "module.exports = router",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.upload."
+  },
+  "Node.koa.error": {
+    "prefix": "node-koa-error",
+    "body": [
+      "// 由于是洋葱模型 因此使用try...catch在中间件链开始时捕获next()执行错误",
+      "app.use(async (ctx, next) => {",
+      "\ttry {",
+      "\t\tawait next()",
+      "\t\t// koa默认会将statusCode设置为了404 而不是异常错误",
+      "\t\tif (ctx.status === 404) {",
+      "\t\t\tctx.status = 404",
+      "\t\t\tctx.body = 'Resource Not Found'",
+      "\t\t}",
+      "\t} catch (err) {",
+      "\t\tctx.status = err.status || 500",
+      "\t\tctx.body = {",
+      "\t\t\tmessage: err.message || 'Internal Server Error'",
+      "\t\t}",
+      "\t}",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.error."
+  },
+  "Node.koa.logger": {
+    "prefix": "node-koa-logger",
+    "body": [
+      "const logger = require('koa-logger')",
+      "",
+      "const accessLogStream = fs.createWriteStream(",
+      "\tpath.join(__dirname, 'logs/access.log'),",
+      "\t{ flags: 'a' }",
+      ")",
+      "const errorLogStream = fs.createWriteStream(",
+      "\tpath.join(__dirname, 'logs/error.log'),",
+      "\t{ flags: 'a' }",
+      ")",
+      "// 创建正则表达式移除 ANSI 颜色转义码",
+      "const stripAnsi = (str) => str.replace(",
+      "\t/[\\u001b\\u009b][[\\]()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, ''",
+      ")",
+      "app.use(logger((str, args) => {",
+      "\tconst status = args[3]",
+      "\tconst cleanStr = stripAnsi(str)",
+      "\tif (status >= 400) {",
+      "\t\terrorLogStream.write(`\\${cleanStr}\\n`)",
+      "\t} else {",
+      "\t\taccessLogStream.write(`\\${cleanStr}\\n`)",
+      "\t}",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.koa.logger."
+  },
+  "Node.koa": {
+    "prefix": "node-koa",
+    "body": [
+      "const Koa = require('koa')",
+      "const app = new Koa()",
+      "const port = 3000",
+      "",
+      "app.use(async (ctx, next) => {",
+      "\tif (ctx.path === '/' && ctx.method === 'GET') {",
+      "\t\tctx.body = 'Hello World'",
+      "\t}",
+      "\tawait next()",
+      "})",
+      "",
+      "app.listen(port, () => {",
+      "\tconsole.log(`Example app running on http://127.0.0.1:\\${port}`)",
+      "})"
+    ],
+    "description": "Code Snippets For Node.koa."
+  }
+}
