@@ -6,3 +6,4 @@ vsc-extension-quickstart.md
 
 # Files to ignore
 src/**
+node_modules/**
