@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/CBiBank/code-snippets/compare/v0.0.7...v0.0.8) (2024-09-20)
+
+
+### ✨ Features | 新功能
+
+* 更新ignore文件 ([115ae2e](https://github.com/CBiBank/code-snippets/commit/115ae2ef68275c11c7dcc4a4e88a1f004198d13e))
+* 添加snippets ([54cbd82](https://github.com/CBiBank/code-snippets/commit/54cbd82622ecfdbbf7a14a7645025efc4dd9c15e))
+
 ### [0.0.7](https://github.com/CBiBank/code-snippets/compare/v0.0.6...v0.0.7) (2024-09-20)
 
 ### [0.0.6](https://github.com/CBiBank/code-snippets/compare/v0.0.5...v0.0.6) (2024-09-19)
