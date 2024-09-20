@@ -2,13 +2,13 @@
   "name": "awesome-snippets",
   "displayName": "awesome-snippets",
   "description": "Code Snippets For Modern Project(Node, Vue, ES...)",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "publisher": "oneyoung19",
   "scripts": {
     "build": "node src/app.js",
     "standard": "standard-version",
-    "release": "standard-version & vsce publish"
+    "release": "node src/app.js && standard-version && vsce publish"
   },
   "engines": {
     "vscode": "^1.91.0"
