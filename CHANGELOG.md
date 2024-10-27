@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/CBiBank/code-snippets/compare/v0.0.8...v0.0.9) (2024-10-27)
+
+
+### ✨ Features | 新功能
+
+* 添加vue2部分snippets ([58e205f](https://github.com/CBiBank/code-snippets/commit/58e205fcbb7285abaea6c6c2a71a5dbcab3f71bc))
+
 ### [0.0.8](https://github.com/CBiBank/code-snippets/compare/v0.0.7...v0.0.8) (2024-09-20)
 
 
