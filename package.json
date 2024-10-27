@@ -45,6 +45,10 @@
       {
         "language": "javascript",
         "path": "./snippets/vue2.code-snippets"
+      },
+      {
+        "language": "vue2",
+        "path": "./snippets/vue2.code-snippets"
       }
     ]
   },

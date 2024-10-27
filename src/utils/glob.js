@@ -14,7 +14,7 @@ exports.globSnippets = function ({ dirname = ''} = {}, config = {}) {
   const { pattern, ...options } = config
   const files = globSync(pattern, options)
   const filenames = files.map(file => path.basename(file)).filter(file => file !== 'index.js')
-  const filenameRegExp = /^\d+\.(.+)\.js$/
+  const filenameRegExp = /^\d+\.(.+)\.(js|vue)$/
 
   const snippets = {}
   filenames.forEach(filename => {
