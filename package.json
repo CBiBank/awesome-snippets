@@ -2,7 +2,7 @@
   "name": "awesome-snippets",
   "displayName": "awesome-snippets",
   "description": "Code Snippets For Modern Project(Node, Vue, ES...)",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "MIT",
   "publisher": "oneyoung19",
   "scripts": {
@@ -47,7 +47,7 @@
         "path": "./snippets/vue2.code-snippets"
       },
       {
-        "language": "vue2",
+        "language": "vue",
         "path": "./snippets/vue2.code-snippets"
       }
     ]
