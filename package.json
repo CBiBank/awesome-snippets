@@ -36,11 +36,35 @@
       },
       {
         "language": "javascript",
+        "path": "./snippets/node-koa.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/node-koa.code-snippets"
+      },
+      {
+        "language": "javascript",
         "path": "./snippets/node-tool.code-snippets"
       },
       {
         "language": "typescript",
         "path": "./snippets/node-tool.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/node-utils.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/node-utils.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/node-vanilla.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/node-vanilla.code-snippets"
       },
       {
         "language": "javascript",
