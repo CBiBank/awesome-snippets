@@ -5,6 +5,7 @@
   "version": "0.0.12",
   "license": "MIT",
   "publisher": "oneyoung19",
+  "icon": "assets/images/logo.png",
   "scripts": {
     "build": "node src/app.js",
     "standard": "standard-version",
@@ -41,6 +42,14 @@
       {
         "language": "typescript",
         "path": "./snippets/node-koa.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/node-egg.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/node-egg.code-snippets"
       },
       {
         "language": "javascript",
