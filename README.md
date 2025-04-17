@@ -67,7 +67,24 @@ For example, here is a list of some Node.js snippets:
 13. `node-koa-download`
 14. `node-koa-cors`
 
-### 5.Node Tool
+### 5.Node Egg
+
+1. `node-egg`
+2. `node-egg-router`
+3. `node-egg-static`
+4. `node-egg-views`
+5. `node-egg-body`
+6. `node-egg-body-formData`
+7. `node-egg-cookie`
+8. `node-egg-session`
+9. `node-egg-middleware`
+10. `node-egg-logger`
+11. `node-egg-error`
+12. `node-egg-upload`
+13. `node-egg-download`
+14. `node-egg-cors`
+
+### 6.Node Tool
 
 1. `node-tool-debug`
 2. `node-tool-nodemon`
