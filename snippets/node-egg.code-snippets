@@ -1,0 +1,297 @@
+{
+  "Node.egg.middleware": {
+    "prefix": "node-egg-middleware",
+    "body": [
+      "app.use('/', (req, res, next) => {",
+      "\tconsole.log(`Middleware before`)",
+      "\tnext()",
+      "\tconsole.log(`Middleware after`)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.middleware."
+  },
+  "Node.egg.session": {
+    "prefix": "node-egg-session",
+    "body": [
+      "const session = require('egg-session')",
+      "app.use(session({",
+      "\tname: 'egg-session-cookie', // 设置 cookie 名称",
+      "\tsecret: 'your-secret-key',  // 用于加密 session ID 的密钥",
+      "\tresave: false,  // 是否强制保存 session 即使未修改",
+      "\tsaveUninitialized: true  // 是否保存未初始化的 session",
+      "}))",
+      "",
+      "// 设置 Session",
+      "app.get('/set-session', (req, res) => {",
+      "\treq.session.username = 'JohnDoe'",
+      "\tres.send('Session has been set')",
+      "})",
+      "",
+      "// 获取 Session",
+      "app.get('/get-session', (req, res) => {",
+      "\tconst username = req.session.username",
+      "\tres.send(`Username from session: \\${username}`)",
+      "})",
+      "",
+      "// 销毁 Session",
+      "app.get('/destroy-session', (req, res) => {",
+      "\treq.session.destroy(err => {",
+      "\t\tif (err) {",
+      "\t\t\treturn res.send('Error destroying session')",
+      "\t\t}",
+      "\t\tres.send('Session has been destroyed')",
+      "\t})",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.session."
+  },
+  "Node.egg.cookie": {
+    "prefix": "node-egg-cookie",
+    "body": [
+      "const cookieParser = require('cookie-parser')",
+      "app.use(cookieParser())",
+      "",
+      "// 设置 Cookie",
+      "app.get('/set-cookie', (req, res) => {",
+      "\tres.cookie('username', 'JohnDoe', { maxAge: 900000, httpOnly: true })",
+      "\tres.send('Cookie has been set')",
+      "})",
+      "",
+      "// 获取 Cookie",
+      "app.get('/get-cookie', (req, res) => {",
+      "\tconst username = req.cookies.username",
+      "\tres.send(`Username from cookie: \\${username}`)",
+      "})",
+      "",
+      "// 清除 Cookie",
+      "app.get('/clear-cookie', (req, res) => {",
+      "\tres.clearCookie('username')",
+      "\tres.send('Cookie has been cleared')",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.cookie."
+  },
+  "Node.egg.body.formData": {
+    "prefix": "node-egg-body-formData",
+    "body": [
+      "const multer = require('multer')",
+      "const upload = multer()",
+      "app.post('/form-data', upload.none(), (req, res) => {",
+      "\tres.send(res.body)",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.body.formData."
+  },
+  "Node.egg.body": {
+    "prefix": "node-egg-body",
+    "body": [
+      "// application/x-www-form-urlencoded",
+      "app.use(egg.urlencoded({ extended: true }))",
+      "// application/json",
+      "app.use(egg.json())",
+      "// text-plain",
+      "app.use(egg.text())",
+      "// application/octet-stream",
+      "app.use(egg.raw())",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.body."
+  },
+  "Node.egg.views": {
+    "prefix": "node-egg-views",
+    "body": [
+      "// config/config.default.js",
+      "const path = require('path')",
+      "",
+      "module.exports = appInfo => {",
+      "\tconst config = {}",
+      "",
+      "\tconfig.view = {",
+      "\t\troot: [",
+      "\t\t\tpath.join(appInfo.baseDir, 'app/view'),",
+      "\t\t\tpath.join(appInfo.baseDir, 'path/to/another'),",
+      "\t\t].join(','),",
+      "\t\tdefaultViewEngine: 'ejs',",
+      "\t\tmapping: {",
+      "\t\t\t'.ejs': 'ejs'",
+      "\t\t}",
+      "\t}",
+      "",
+      "\treturn config",
+      "}",
+      "",
+      "// config/plugin.js",
+      "exports.ejs = {",
+      "\tenable: true,",
+      "\tpackage: 'egg-view-ejs'",
+      "}",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.views."
+  },
+  "Node.egg.static": {
+    "prefix": "node-egg-static",
+    "body": [
+      "console.log('Message:, Egg Server static is in app/public.')",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.static."
+  },
+  "Node.egg.router": {
+    "prefix": "node-egg-router",
+    "body": [
+      "const { router, controller } = app",
+      "router.get('/', controller.home.index)",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.router."
+  },
+  "Node.egg.cors": {
+    "prefix": "node-egg-cors",
+    "body": [
+      "const cors = require('cors')",
+      "app.use(cors({",
+      "\torigin: '*',",
+      "\tmethods: ['GET', 'POST'],",
+      "\tallowedHeaders: ['Content-Type', 'Authorization'],",
+      "\tcredentials: true,",
+      "\tpreflightContinue: false,",
+      "\toptionsSuccessStatus: 204",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.cors."
+  },
+  "Node.egg.download": {
+    "prefix": "node-egg-download",
+    "body": [
+      "router.post('/download', (req, res) => {",
+      "\tconst { filename } = req.body",
+      "\tconst filePath = path.join(__dirname, '../uploads', filename)",
+      "\t// download方法会在响应头中添加Content-Disposition头",
+      "\tres.download(filePath, filename, (err) => {",
+      "\t\tif (err) {",
+      "\t\t\tconsole.error('File failed to download:', err)",
+      "\t\t\tres.status(500).send('Error downloading file')",
+      "\t\t}",
+      "\t})",
+      "\t// res.sendFile(filePath, (err) => {",
+      "\t//   if (err) {",
+      "\t//     console.error('File failed to send:', err)",
+      "\t//     res.status(500).send('Error sending file')",
+      "\t//   }",
+      "\t// })",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.download."
+  },
+  "Node.egg.upload": {
+    "prefix": "node-egg-upload",
+    "body": [
+      "const egg = require('egg')",
+      "const router = egg.Router()",
+      "const fs = require('node:fs')",
+      "const path = require('node:path')",
+      "",
+      "const multer = require('multer')",
+      "const uploadDirname = 'uploads'",
+      "const uploadDir = path.resolve(__dirname, uploadDirname)",
+      "if (!fs.existsSync(uploadDir)) {",
+      "\tfs.mkdirSync(uploadDir, { recursive: true })",
+      "}",
+      "const storage = multer.diskStorage({",
+      "\tdestination: function (req, file, cb) {",
+      "\t\tcb(null, uploadDir)",
+      "\t},",
+      "\tfilename: function (req, file, cb) {",
+      "\t\tcb(null, `\\${Date.now()}-\\${file.originalname}`)",
+      "\t}",
+      "})",
+      "const upload = multer({ storage: storage })",
+      "",
+      "router.post('/upload', upload.single('file'), (req, res, next) => {",
+      "\ttry {",
+      "\t\tconsole.log(req.file)",
+      "\t\tres.send('File uploaded successfully!')",
+      "\t} catch (error) {",
+      "\t\tnext(error)",
+      "\t}",
+      "})",
+      "",
+      "module.exports = router",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.upload."
+  },
+  "Node.egg.error": {
+    "prefix": "node-egg-error",
+    "body": [
+      "app.use('/', (req, res, next) => {",
+      "\tconst error = new Error('Not Found')",
+      "\terror.status = 404",
+      "\tnext(error)",
+      "})",
+      "app.use((err, req, res, next) => {",
+      "\tconst { name, status, log = false } = err",
+      "\tif (log) {",
+      "\t\tconst errorDetails = `",
+      "\t\t\tError Message: \\${err.message}",
+      "\t\t\tStatus Code: \\${err.status || 500}",
+      "\t\t\tStack Trace: \\${err.stack}",
+      "\t\t\tRequest Method: \\${req.method}",
+      "\t\t\tRequest URL: \\${req.originalUrl}",
+      "\t\t\tRequest Headers: \\${JSON.stringify(req.headers)}",
+      "\t\t`",
+      "\t\terrorLogStream && errorLogStream.write(errorDetails.replace(/ /g, '') + '\\n', 'utf-8')",
+      "\t}",
+      "\tif (name === 'ValidationError') {",
+      "\t\treturn res.status(400).send({ error: name })",
+      "\t}",
+      "\tif (status === 404) {",
+      "\t\treturn res.status(404).send('Not Found')",
+      "\t}",
+      "\tres.status(500).send('Internal Server Error')",
+      "})",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.error."
+  },
+  "Node.egg.logger": {
+    "prefix": "node-egg-logger",
+    "body": [
+      "const morgan = require('morgan')",
+      "const fs = require('node:fs')",
+      "const path = require('node:path')",
+      "const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), { flags: 'a' })",
+      "const errorLogStream = fs.createWriteStream(path.join(__dirname, 'logs/error.log'), { flags: 'a' })",
+      "",
+      "// combined > common > short > dev >= short",
+      "app.use(morgan('combined', {",
+      "\tstream: accessLogStream, // 指定日志的输出流。默认是 process.stdout（控制台输出）",
+      "\tskip: (req, res) => res.statusCode >= 400, // 跳过特定条件下的日志记录",
+      "\timmediate: false // 立即记录日志，通常日志是在响应发送后记录",
+      "}))",
+      "app.use(morgan('combined', {",
+      "\tstream: errorLogStream,",
+      "\tskip: (req, res) => res.statusCode < 400,",
+      "\timmediate: false",
+      "}))",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg.logger."
+  },
+  "Node.egg": {
+    "prefix": "node-egg",
+    "body": [
+      "console.log('Message:, Egg Server dont need code.')",
+      "console.log('You can use \"pnpm create egg --type=simple --registry=http://r.cnpmjs.org\" to create a simple egg project.')",
+      ""
+    ],
+    "description": "Code Snippets For Node.egg."
+  }
+}
