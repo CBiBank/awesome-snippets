@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/CBiBank/code-snippets/compare/v0.0.11...v0.0.12) (2025-04-17)
+
+
+### ✨ Features | 新功能
+
+* **vscode:** 添加 Node.js (Egg) 代码片段 ([c3ae75d](https://github.com/CBiBank/code-snippets/commit/c3ae75d8cb265a63d9c3d944dea75d4b18689959))
+
+
+### ✏️ Documentation | 文档
+
+* **README:** 更新 Egg.js 示例列表 ([42b9ee5](https://github.com/CBiBank/code-snippets/commit/42b9ee5dc9d11b35aee2473a3ea3cfc1aec4060e))
+
 ### 0.0.11 (2025-04-17)
 
 
