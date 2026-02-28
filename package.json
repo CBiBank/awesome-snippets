@@ -2,7 +2,7 @@
   "name": "awesome-snippets",
   "displayName": "awesome-snippets",
   "description": "Code Snippets For Modern Project(Node, Vue, ES...)",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "publisher": "oneyoung19",
   "icon": "assets/images/logo.png",
@@ -83,7 +83,7 @@
         "language": "vue",
         "path": "./snippets/vue2.code-snippets"
       },
-			{
+      {
         "language": "javascript",
         "path": "./snippets/vue3.code-snippets"
       },

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/CBiBank/code-snippets/compare/v0.0.13...v0.0.14) (2026-02-28)
+
+
+### ✨ Features | 新功能
+
+* **snippets:** add Vue3 snippets and Node.js inspector promises and wasi snippets ([b3781d0](https://github.com/CBiBank/code-snippets/commit/b3781d0e97f9d569939b29a58ce93029ab8a4146))
+
 ### [0.0.13](https://github.com/CBiBank/code-snippets/compare/v0.0.12...v0.0.13) (2025-04-17)
 
 
