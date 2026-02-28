@@ -293,6 +293,20 @@
     ],
     "description": "ESM Code Snippets For Node.inspector"
   },
+  "Node.inspector/promises": {
+    "prefix": "node-inspector/promises",
+    "body": [
+      "const ${1:inspectorPromises} = require('node:inspector/promises')"
+    ],
+    "description": "Code Snippets For Node.inspector/promises"
+  },
+  "Node.ESM.inspector/promises": {
+    "prefix": "node-esm-inspector/promises",
+    "body": [
+      "import ${1:inspectorPromises} from 'node:inspector/promises'"
+    ],
+    "description": "ESM Code Snippets For Node.inspector/promises"
+  },
   "Node.module": {
     "prefix": "node-module",
     "body": [
@@ -698,6 +712,20 @@
       "import ${1:vm} from 'node:vm'"
     ],
     "description": "ESM Code Snippets For Node.vm"
+  },
+  "Node.wasi": {
+    "prefix": "node-wasi",
+    "body": [
+      "const ${1:wasi} = require('node:wasi')"
+    ],
+    "description": "Code Snippets For Node.wasi"
+  },
+  "Node.ESM.wasi": {
+    "prefix": "node-esm-wasi",
+    "body": [
+      "import ${1:wasi} from 'node:wasi'"
+    ],
+    "description": "ESM Code Snippets For Node.wasi"
   },
   "Node.worker_threads": {
     "prefix": "node-worker_threads",

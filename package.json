@@ -82,6 +82,14 @@
       {
         "language": "vue",
         "path": "./snippets/vue2.code-snippets"
+      },
+			{
+        "language": "javascript",
+        "path": "./snippets/vue3.code-snippets"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/vue3.code-snippets"
       }
     ]
   },
